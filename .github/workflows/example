@@ -1,4 +1,3 @@
-# Простой workflow для развёртывания статического содержимого на GitHub Pages
 name: Deploy static content to Pages
 on:
   # Триггером выступает push в ветку master
@@ -12,6 +11,8 @@ permissions:
   contents: read # Мы разрешаем читать контент из нашего репозитория
   pages: write # разрешаем перезаписывать github page
   id-token: write # Разрешаем использовать GITHUB_TOKEN
+  env: 
+    PUBLIC_PATH: /github_actions/
 
 jobs: # Секция jobs определяет этапы процесса
  
